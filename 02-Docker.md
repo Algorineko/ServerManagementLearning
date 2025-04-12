@@ -65,7 +65,7 @@ exit
 sudo docker rename <raw-name> <new-name>
 ```
 
-![image-20250410203539790](C:\Users\ZhangJialiang\AppData\Roaming\Typora\typora-user-images\image-20250410203539790.png)
+
 
 
 
