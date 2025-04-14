@@ -18,6 +18,14 @@ sudo apt full-upgrade
 sudo docker images
 ```
 
+#### delete image
+
+```sh
+# 二选一即可
+docker rmi <image-id>
+docker image rm <image-id>
+```
+
 #### download images
 
 ```sh
@@ -67,6 +75,26 @@ exit
 
 ```sh
 sudo docker rename <raw-name> <new-name>
+```
+
+### DockerHub
+
+配置见： [Docker/DockerHub 国内镜像源/加速列表（4月6日更新-长期维护）-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/2485043)
+
+毫秒镜像： [毫秒镜像](https://1ms.run/)
+
+```sh
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<EOF
+{
+    "registry-mirrors": [
+        "https://docker.1ms.run",
+        "https://docker.xuanyuan.me"
+    ]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
 ```
 
 
