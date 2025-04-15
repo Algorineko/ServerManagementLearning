@@ -32,6 +32,8 @@ docker image rm <image-id>
 sudo docker pill ubuntu
 ```
 
+---
+
 #### run docker
 
 ```sh
@@ -67,6 +69,7 @@ sudo docker attach <container-id|name>
 
 ```sh
 sudo docker start/stop/pause/unpause/rm <name>
+# rm [-f] 强制删除容器，不论其是否运行
 # stop a container in the docker's shell
 exit
 ```
@@ -75,6 +78,17 @@ exit
 
 ```sh
 sudo docker rename <raw-name> <new-name>
+```
+
+清理缓存：
+
+```sh
+# 查看磁盘使用情况
+df -h
+# 清理Docker缓存和未使用的镜像/容器
+docker system prune -a --volumes
+# 清理临时文件
+sudo rm -rf /tmp/*
 ```
 
 ### DockerHub
