@@ -44,5 +44,3 @@ docker ps --filter name=<user1>
 docker exec -it <id|name> bash
 ```
 
-虚拟机IP：192.168.230.129
-
